@@ -1,0 +1,19 @@
+mov r0, &A
+Load r1, [r0]
+
+mov r2, &B
+load r3, [r2]
+
+mov r6, 5
+
+mov r7, 1
+
+cmp_greater_eq r4, r1, r6
+jump_cond r4 21
+
+add r3, r3, r1
+add r1, r1, r7
+
+jump 16
+store [r0], r1
+store [r2], r3
