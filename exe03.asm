@@ -45,7 +45,7 @@ loop:
 	
 preparar_print:             
 	move $t0, $zero         # usar $t0 como o novo 'i' para não quebrar o syscall
-	la $t3, vetor3 
+	la $t3, vetor3 		#resetando o ponteiro para o começo do vetor
 
 printar_vetor:            
 	beq $t0, $a1, end       
@@ -66,8 +66,6 @@ printar_vetor:
 	addi $t0, $t0, 1      
 	
 	b printar_vetor         
-
-
 end:
 	li $v0, 10
 	syscall
