@@ -4,7 +4,6 @@
     str:    .asciiz "Maior valor do vetor: "
 
 .text
-.globl main
 main:
     lw $t0, n
     la $t1, vetor
